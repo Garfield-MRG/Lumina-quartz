@@ -35,56 +35,66 @@ export async function POST(request: Request) {
     const contactEmail =
       process.env.CONTACT_EMAIL || "atelier@luminaquartz.fr";
 
-    const r1 = await resend.emails.send({
-      from: "Lumina & Quartz <onboarding@resend.dev>",
-      to: [contactEmail],
-      subject: `Nouvelle demande — ${typeLabels[type] || type}`,
-      html: `
-        <div style="font-family: sans-serif; max-width: 600px;">
-          <h2 style="color: #c4a882;">Nouvelle demande de contact</h2>
-          <hr style="border: none; height: 1px; background: #c4a882;" />
-          <table style="width: 100%; margin-top: 20px;">
-            <tr>
-              <td style="padding: 8px 0; color: #888; width: 120px;">Nom</td>
-              <td style="padding: 8px 0;">${name}</td>
-            </tr>
-            <tr>
-              <td style="padding: 8px 0; color: #888;">Email</td>
-              <td style="padding: 8px 0;"><a href="mailto:${email}">${email}</a></td>
-            </tr>
-            <tr>
-              <td style="padding: 8px 0; color: #888;">Type</td>
-              <td style="padding: 8px 0;">${typeLabels[type] || type}</td>
-            </tr>
-            <tr>
-              <td style="padding: 8px 0; color: #888; vertical-align: top;">Message</td>
-              <td style="padding: 8px 0;">${message.replace(/\n/g, "<br>")}</td>
-            </tr>
-          </table>
-        </div>
-      `,
-    });
+    try {
+      const r1 = await resend.emails.send({
+        from: "Lumina & Quartz <onboarding@resend.dev>",
+        to: [contactEmail],
+        subject: `Nouvelle demande — ${typeLabels[type] || type}`,
+        html: `
+          <div style="font-family: sans-serif; max-width: 600px;">
+            <h2 style="color: #c4a882;">Nouvelle demande de contact</h2>
+            <hr style="border: none; height: 1px; background: #c4a882;" />
+            <table style="width: 100%; margin-top: 20px;">
+              <tr>
+                <td style="padding: 8px 0; color: #888; width: 120px;">Nom</td>
+                <td style="padding: 8px 0;">${name}</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0; color: #888;">Email</td>
+                <td style="padding: 8px 0;"><a href="mailto:${email}">${email}</a></td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0; color: #888;">Type</td>
+                <td style="padding: 8px 0;">${typeLabels[type] || type}</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0; color: #888; vertical-align: top;">Message</td>
+                <td style="padding: 8px 0;">${message.replace(/\n/g, "<br>")}</td>
+              </tr>
+            </table>
+          </div>
+        `,
+      });
+      console.log("[resend] email 1 (atelier) →", contactEmail, r1);
+    } catch (err) {
+      console.error("[resend] email 1 failed", err);
+    }
 
-    console.log("[resend] email 1 (atelier) →", contactEmail, r1);
-
-    const r2 = await resend.emails.send({
-      from: "Lumina & Quartz <onboarding@resend.dev>",
-      to: [email],
-      subject: "Votre demande a bien été reçue — Lumina & Quartz",
-      html: `
-        <div style="font-family: sans-serif; max-width: 600px;">
-          <h2 style="color: #c4a882;">Merci ${name},</h2>
-          <p>Nous avons bien reçu votre demande et reviendrons vers vous sous 48 heures.</p>
-          <hr style="border: none; height: 1px; background: #c4a882; margin: 24px 0;" />
-          <p style="color: #888; font-size: 14px;">
-            Lumina & Quartz — Architecture d'Intérieur<br>
-            18 Rue de la Roquette, 75011 Paris
-          </p>
-        </div>
-      `,
-    });
-
-    console.log("[resend] email 2 (client) →", email, r2);
+    // Only send acknowledgement if visitor email matches contact email
+    // (Resend test mode only delivers to the account owner address)
+    if (email === contactEmail) {
+      try {
+        const r2 = await resend.emails.send({
+          from: "Lumina & Quartz <onboarding@resend.dev>",
+          to: [email],
+          subject: "Votre demande a bien été reçue — Lumina & Quartz",
+          html: `
+            <div style="font-family: sans-serif; max-width: 600px;">
+              <h2 style="color: #c4a882;">Merci ${name},</h2>
+              <p>Nous avons bien reçu votre demande et reviendrons vers vous sous 48 heures.</p>
+              <hr style="border: none; height: 1px; background: #c4a882; margin: 24px 0;" />
+              <p style="color: #888; font-size: 14px;">
+                Lumina & Quartz — Architecture d'Intérieur<br>
+                18 Rue de la Roquette, 75011 Paris
+              </p>
+            </div>
+          `,
+        });
+        console.log("[resend] email 2 (client) →", email, r2);
+      } catch (err) {
+        console.error("[resend] email 2 failed", err);
+      }
+    }
   }
 
   return NextResponse.json({ success: true });
