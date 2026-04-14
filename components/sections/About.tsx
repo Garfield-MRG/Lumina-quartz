@@ -100,7 +100,7 @@ export default function About() {
               className="relative overflow-hidden aspect-[4/5]"
             >
               <Image
-                src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=700&h=900&fit=crop&q=80"
+                src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=700&h=900&fit=crop&q=80"
                 alt="Atelier Lumina & Quartz"
                 fill
                 className="object-cover"
