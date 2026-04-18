@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     template: "%s | Lumina & Quartz",
   },
   description:
-    "Atelier d'architecture d'intérieur à Paris. Béton, lumière et matière, orchestrés avec précision pour créer des intérieurs qui résonnent.",
+    "Atelier d'architecture d'intérieur à Paris. Béton, lumière, matière.",
   keywords: [
     "architecture d'intérieur",
     "architecte Paris",
@@ -52,12 +52,12 @@ export const metadata: Metadata = {
     siteName: "Lumina & Quartz",
     title: "Lumina & Quartz | Architecture d'Intérieur Paris",
     description:
-      "Atelier d'architecture d'intérieur à Paris. Béton, lumière et matière, orchestrés avec précision.",
+      "Atelier d'architecture d'intérieur à Paris. Béton, lumière, matière.",
     images: [
       {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
+        url: "/og-image.png",
+        width: 1081,
+        height: 898,
         alt: "Lumina & Quartz, Architecture d'Intérieur",
       },
     ],
@@ -67,6 +67,7 @@ export const metadata: Metadata = {
     title: "Lumina & Quartz | Architecture d'Intérieur Paris",
     description:
       "Atelier d'architecture d'intérieur à Paris. Béton, lumière, matière.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
