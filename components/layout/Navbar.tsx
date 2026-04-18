@@ -30,7 +30,7 @@ export default function Navbar() {
           scrolled ? "glass-nav-solid py-4" : "glass-nav py-6"
         }`}
       >
-        <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between">
+        <div className="w-full px-6 md:px-12 flex items-center justify-between">
           <Link
             href="/"
             className="group flex items-baseline gap-2"

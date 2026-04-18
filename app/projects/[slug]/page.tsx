@@ -105,7 +105,7 @@ export default async function ProjectPage({ params }: Props) {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/50 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 px-6 md:px-12 pb-16">
-            <div className="max-w-[1440px] mx-auto">
+            <div className="w-full">
               <span className="font-mono text-caption uppercase text-quartz tracking-widest block mb-4">
                 {category}, {year}
               </span>
@@ -121,7 +121,7 @@ export default async function ProjectPage({ params }: Props) {
         </header>
 
         <section className="py-24 px-6 md:px-12">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl">
             <p className="font-body text-xl text-concrete-300 font-light leading-relaxed mb-16">
               {description}
             </p>
@@ -130,7 +130,7 @@ export default async function ProjectPage({ params }: Props) {
 
         {!isDemo && gallery.length > 0 && (
           <section className="px-6 md:px-12 pb-24">
-            <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
               {gallery.map((img: unknown, i: number) => {
                 const image = img as {
                   asset: { _ref: string };
@@ -169,7 +169,7 @@ export default async function ProjectPage({ params }: Props) {
         )}
 
         <div className="px-6 md:px-12 pb-24">
-          <div className="max-w-[1440px] mx-auto">
+          <div className="w-full">
             <Link
               href="/projects"
               className="inline-flex items-center gap-3 font-mono text-caption uppercase text-concrete-400 hover:text-quartz transition-colors tracking-widest"

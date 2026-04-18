@@ -48,7 +48,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-obsidian/50 to-transparent" />
       </div>
 
-      <div className="relative z-10 max-w-[1440px] mx-auto w-full">
+      <div className="relative z-10 w-full">
         <motion.div
           variants={fadeIn}
           custom={0.3}

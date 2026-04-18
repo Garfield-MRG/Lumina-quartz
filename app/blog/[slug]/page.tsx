@@ -87,7 +87,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       <article className="pt-32 pb-24">
         <header className="px-6 md:px-12 mb-12">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl">
             <div className="flex items-center gap-4 mb-6">
               <time className="font-mono text-caption uppercase text-quartz tracking-widest">
                 {new Date(publishedAt).toLocaleDateString("fr-FR", {
@@ -126,7 +126,7 @@ export default async function BlogPostPage({ params }: Props) {
 
         {tags.length > 0 && (
           <div className="px-6 md:px-12 mb-16">
-            <div className="max-w-3xl mx-auto flex flex-wrap gap-3">
+            <div className="max-w-3xl flex flex-wrap gap-3">
               {tags.map((tag) => (
                 <span
                   key={tag}
@@ -140,7 +140,7 @@ export default async function BlogPostPage({ params }: Props) {
         )}
 
         <div className="px-6 md:px-12">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl">
             <Link
               href="/blog"
               className="inline-flex items-center gap-3 font-mono text-caption uppercase text-concrete-400 hover:text-quartz transition-colors tracking-widest"

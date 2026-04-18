@@ -118,7 +118,7 @@ export default function ProjectGrid({ projects }: { projects: Project[] }) {
       ref={sectionRef}
       className="py-24 md:py-40 px-6 md:px-12"
     >
-      <div className="max-w-[1440px] mx-auto">
+      <div className="w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}

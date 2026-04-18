@@ -64,7 +64,7 @@ export default function ContactForm() {
       ref={ref}
       className="py-24 md:py-40 px-6 md:px-12 relative"
     >
-      <div className="max-w-[1440px] mx-auto">
+      <div className="w-full">
         <motion.hr
           initial={{ scaleX: 0 }}
           animate={isInView ? { scaleX: 1 } : {}}

@@ -39,7 +39,7 @@ export default function About() {
     >
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent to-quartz/30" />
 
-      <div className="max-w-[1440px] mx-auto">
+      <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-asymmetric gap-16 lg:gap-24">
           <motion.div
             variants={stagger}

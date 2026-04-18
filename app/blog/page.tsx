@@ -38,7 +38,7 @@ export default async function BlogPage() {
 
   return (
     <div className="pt-32 pb-24 px-6 md:px-12">
-      <div className="max-w-[1440px] mx-auto">
+      <div className="w-full">
         <header className="mb-16 md:mb-24">
           <span className="font-mono text-caption uppercase text-quartz tracking-widest block mb-4">
             Journal

@@ -9,7 +9,7 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="border-t border-concrete-800/50 py-12 px-6 md:px-12">
-      <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6">
         <Link href="/" className="flex items-baseline gap-2">
           <span className="font-serif text-lg text-concrete-400">Lumina</span>
           <span className="text-quartz/50 text-sm">&amp;</span>
