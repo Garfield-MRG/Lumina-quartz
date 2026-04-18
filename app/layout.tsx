@@ -36,13 +36,13 @@ const siteUrl =
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Lumina & Quartz | Architecture d'Intérieur Paris",
+    default: "Lumina & Quartz | Architecture d’Intérieur Paris",
     template: "%s | Lumina & Quartz",
   },
   description:
-    "Atelier d'architecture d'intérieur à Paris. Béton, lumière, matière.",
+    "Atelier d’architecture d’intérieur à Paris. Béton, lumière, matière.",
   keywords: [
-    "architecture d'intérieur",
+    "architecture d’intérieur",
     "architecte Paris",
     "design intérieur",
     "décoration luxe",
@@ -56,23 +56,23 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: siteUrl,
     siteName: "Lumina & Quartz",
-    title: "Lumina & Quartz | Architecture d'Intérieur Paris",
+    title: "Lumina & Quartz | Architecture d’Intérieur Paris",
     description:
-      "Atelier d'architecture d'intérieur à Paris. Béton, lumière, matière.",
+      "Atelier d’architecture d’intérieur à Paris. Béton, lumière, matière.",
     images: [
       {
         url: "/og-image.png",
         width: 1081,
         height: 898,
-        alt: "Lumina & Quartz, Architecture d'Intérieur",
+        alt: "Lumina & Quartz, Architecture d’Intérieur",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lumina & Quartz | Architecture d'Intérieur Paris",
+    title: "Lumina & Quartz | Architecture d’Intérieur Paris",
     description:
-      "Atelier d'architecture d'intérieur à Paris. Béton, lumière, matière.",
+      "Atelier d’architecture d’intérieur à Paris. Béton, lumière, matière.",
     images: ["/og-image.png"],
   },
   robots: {
