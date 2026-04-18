@@ -17,7 +17,7 @@ export function organizationJsonLd() {
     "@type": "InteriorDesigner",
     name: "Lumina & Quartz",
     description:
-      "Atelier d'architecture d'intérieur à Paris. Béton, lumière, matière — orchestrés avec précision.",
+      "Atelier d'architecture d'intérieur à Paris. Béton, lumière et matière, orchestrés avec précision.",
     url: process.env.NEXT_PUBLIC_SITE_URL,
     address: {
       "@type": "PostalAddress",

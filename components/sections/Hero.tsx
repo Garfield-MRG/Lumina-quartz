@@ -57,7 +57,7 @@ export default function Hero() {
           className="mb-8 md:mb-12"
         >
           <span className="font-mono text-caption uppercase text-quartz tracking-widest">
-            Architecture d&apos;Int&eacute;rieur — Paris
+            Architecture d&apos;Int&eacute;rieur, Paris
           </span>
         </motion.div>
 
@@ -101,8 +101,8 @@ export default function Hero() {
             animate="visible"
             className="font-body text-subhead text-concrete-400 max-w-md font-light"
           >
-            Chaque espace est une composition. B&eacute;ton, lumi&egrave;re,
-            mati&egrave;re — orchestr&eacute;s avec pr&eacute;cision pour
+            Chaque espace est une composition. B&eacute;ton, lumi&egrave;re et
+            mati&egrave;re, orchestr&eacute;s avec pr&eacute;cision pour
             cr&eacute;er des int&eacute;rieurs qui r&eacute;sonnent.
           </motion.p>
 

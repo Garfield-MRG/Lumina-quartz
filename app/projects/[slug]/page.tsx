@@ -107,7 +107,7 @@ export default async function ProjectPage({ params }: Props) {
           <div className="absolute bottom-0 left-0 right-0 px-6 md:px-12 pb-16">
             <div className="max-w-[1440px] mx-auto">
               <span className="font-mono text-caption uppercase text-quartz tracking-widest block mb-4">
-                {category} — {year}
+                {category}, {year}
               </span>
               <h1 className="font-serif text-heading text-concrete-100 mb-4">
                 {title}
@@ -149,7 +149,7 @@ export default async function ProjectPage({ params }: Props) {
                   >
                     <Image
                       src={imgUrl}
-                      alt={image.alt || `${title} — photo ${i + 1}`}
+                      alt={image.alt || `${title}, photo ${i + 1}`}
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, 50vw"

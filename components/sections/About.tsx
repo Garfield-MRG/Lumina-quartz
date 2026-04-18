@@ -66,9 +66,9 @@ export default function About() {
                 Fondé en 2012, Lumina &amp; Quartz est un atelier
                 d&apos;architecture d&apos;intérieur où la rigueur du béton
                 rencontre la sensibilité de la lumière naturelle. Chaque projet
-                est une partition que nous composons — matière, espace, lumière —
-                pour créer des lieux qui portent l&apos;empreinte de ceux qui
-                les habitent.
+                est une partition que nous composons avec la matière, l&apos;espace
+                et la lumière, pour créer des lieux qui portent l&apos;empreinte
+                de ceux qui les habitent.
               </p>
               <p className="font-body text-lg text-concrete-400 font-light leading-relaxed">
                 Nous croyons que le luxe authentique n&apos;est pas dans
@@ -84,7 +84,7 @@ export default function About() {
                 &ldquo;L&apos;espace est le luxe de demain.&rdquo;
               </p>
               <p className="font-mono text-caption uppercase text-concrete-500 mt-3 tracking-widest">
-                — Jean Nouvel
+                Jean Nouvel
               </p>
             </motion.div>
           </motion.div>

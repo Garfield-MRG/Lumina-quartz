@@ -30,7 +30,7 @@ export default function Footer() {
         </div>
 
         <span className="font-mono text-caption text-concrete-700 tracking-wider">
-          &copy; {new Date().getFullYear()} — Tous droits réservés
+          &copy; {new Date().getFullYear()} Tous droits réservés
         </span>
       </div>
     </footer>

@@ -39,7 +39,7 @@ export async function POST(request: Request) {
       const r1 = await resend.emails.send({
         from: "Lumina & Quartz <onboarding@resend.dev>",
         to: [contactEmail],
-        subject: `Nouvelle demande — ${typeLabels[type] || type}`,
+        subject: `Nouvelle demande : ${typeLabels[type] || type}`,
         html: `
           <div style="font-family: sans-serif; max-width: 600px;">
             <h2 style="color: #c4a882;">Nouvelle demande de contact</h2>
@@ -77,14 +77,14 @@ export async function POST(request: Request) {
         const r2 = await resend.emails.send({
           from: "Lumina & Quartz <onboarding@resend.dev>",
           to: [email],
-          subject: "Votre demande a bien été reçue — Lumina & Quartz",
+          subject: "Votre demande a bien été reçue | Lumina & Quartz",
           html: `
             <div style="font-family: sans-serif; max-width: 600px;">
               <h2 style="color: #c4a882;">Merci ${name},</h2>
               <p>Nous avons bien reçu votre demande et reviendrons vers vous sous 48 heures.</p>
               <hr style="border: none; height: 1px; background: #c4a882; margin: 24px 0;" />
               <p style="color: #888; font-size: 14px;">
-                Lumina & Quartz — Architecture d'Intérieur<br>
+                Lumina & Quartz, Architecture d'Intérieur<br>
                 18 Rue de la Roquette, 75011 Paris
               </p>
             </div>
