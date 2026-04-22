@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const socials = [
-  { label: "Instagram", href: "#" },
+  { label: "Instagram", href: "https://www.instagram.com/sangyohan08/" },
   { label: "Pinterest", href: "#" },
   { label: "LinkedIn", href: "#" },
 ];
@@ -17,16 +17,21 @@ export default function Footer() {
         </Link>
 
         <div className="flex items-center gap-8">
-          {socials.map((social) => (
-            <a
-              key={social.label}
-              href={social.href}
-              data-cursor-hover
-              className="font-mono text-caption uppercase text-concrete-600 hover:text-quartz transition-colors duration-300 tracking-widest"
-            >
-              {social.label}
-            </a>
-          ))}
+          {socials.map((social) => {
+            const isExternal = social.href.startsWith("http");
+            return (
+              <a
+                key={social.label}
+                href={social.href}
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "noopener noreferrer" : undefined}
+                data-cursor-hover
+                className="font-mono text-caption uppercase text-concrete-600 hover:text-quartz transition-colors duration-300 tracking-widest"
+              >
+                {social.label}
+              </a>
+            );
+          })}
         </div>
 
         <span className="font-mono text-caption text-concrete-700 tracking-wider">
