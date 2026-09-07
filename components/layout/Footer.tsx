@@ -34,9 +34,18 @@ export default function Footer() {
           })}
         </div>
 
-        <span className="font-mono text-caption text-concrete-700 tracking-wider">
-          &copy; {new Date().getFullYear()} Tous droits réservés
-        </span>
+        <div className="flex items-center gap-6">
+          <Link
+            href="/mentions-legales"
+            data-cursor-hover
+            className="font-mono text-caption uppercase text-concrete-600 hover:text-quartz transition-colors duration-300 tracking-widest"
+          >
+            Mentions légales
+          </Link>
+          <span className="font-mono text-caption text-concrete-700 tracking-wider">
+            &copy; {new Date().getFullYear()} Tous droits réservés
+          </span>
+        </div>
       </div>
     </footer>
   );

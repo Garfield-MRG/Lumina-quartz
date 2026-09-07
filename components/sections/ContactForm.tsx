@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import type { ContactFormData } from "@/lib/validations";
 
@@ -245,6 +246,21 @@ export default function ContactForm() {
                 <p className="text-red-400 text-sm mt-1">{errors.message}</p>
               )}
             </div>
+
+            <p className="font-body text-sm text-concrete-500 font-light leading-relaxed">
+              Les informations recueillies servent uniquement à traiter votre
+              demande et sont conservées douze mois au plus. Vous disposez d’un
+              droit d’accès, de rectification et d’effacement, que vous pouvez
+              exercer à l’adresse atelier@luminaquartz.fr.{" "}
+              <Link
+                href="/mentions-legales#donnees-personnelles"
+                data-cursor-hover
+                className="text-concrete-400 underline underline-offset-4 decoration-concrete-700 hover:text-quartz hover:decoration-quartz transition-colors duration-300"
+              >
+                En savoir plus
+              </Link>
+              .
+            </p>
 
             <button
               type="submit"
